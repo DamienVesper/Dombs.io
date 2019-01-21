@@ -1,0 +1,285 @@
+* {
+	transition: 0.3s;
+	box-sizing: border-box;
+	font-family: Verdana, Geneva, sans-serif;
+	overflow: hidden; /* Automatically hides overflow */
+}
+html, body {
+	display: block;
+	padding: 0px;
+	margin: 0px;	
+	width: 100%;
+	height: 100%;
+	background-color: #013220;
+}
+/* Button Styling */
+.btn {
+	border: none;
+	border-radius: 5px;
+	display: flex;
+	align-self: center;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	color: #FFF;
+}
+.btn-green {
+	background-color: #32fd32;
+}
+.btn-red {
+	background-color: #e30000;
+}
+.hud-intro {
+	display: block;
+	width: 100%;
+	height: 935px;
+	background-image: url("https://raw.githubusercontent.com/DamienVesper/Dombs.io/master/images/Capture_decran_2019-01-05_a_19.15.42.png");
+	background-repeat: repeat;
+}
+.hud-intro-cover {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.65);
+}
+.hud-intro-gamename {
+	display: block;
+	font-size: 2em;
+	font-weight: bold;
+	text-align: center;
+}
+.hud-intro-gametext {
+	display: block;
+	font-size: 0.85em;
+	color: #666;
+	font-weight: bold;
+	text-align: center;
+}
+.hud-intro-topright {
+	display: block;
+}
+.hud-intro-flex {
+	display: flex;
+	width: 100%;
+	height: 935px;
+}
+.hud-intro-area {
+	display: block;
+	color: #FFF;
+	border: 1px solid #3774d6;
+	background-color: #1e90ff;
+	border-radius: 5px;
+}
+.hud-intro-column {
+	display: inline-block;
+	margin: 10px 5px;
+  -webkit-flex: 1; /* Safari 6.1+ */
+  -ms-flex: 1; /* IE 10 */ 
+  flex: 1;
+	height: 935px;
+}
+.hud-intro-top {
+	display: flex;
+}
+.hud-intro-topleft {
+	margin-left: 5px;
+	margin-right: auto;
+}
+.hud-intro-topright {
+	margin-left: auto;
+	margin-right: 5px;
+}
+.hud-intro-placeholder {
+	display: none;
+}
+.hud-intro-label {
+	display: none;
+}
+.hud-intro-name {
+	display: block;
+	width: 90%;
+	padding: 8px;
+	border-radius: 5px;
+	background-color: #00aaff;
+	border: 1px solid #3774d6;
+	color: #000;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+.hud-intro-servers {
+	display: block;
+	width: 90%;
+	padding: 8px;
+	border-radius: 5px;
+	background-color: #00aaff;
+	border: 1px solid #3774d6;
+	color: #000;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+/* Enable and Disable Styling */
+.disabled {
+	opacity: 0.5;
+}
+.enabled {
+	opacity: 1;
+}
+.hud-intro-play {
+	display: block;
+	width: 90%;
+	padding: 8px;
+	border-radius: 5px;
+	border: 1px solid #3774d6;
+	color: #FFF;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+}
+.hud-intro-bottom, .hud-game, .hud-game * {
+	display: none;
+}
+/* Hud Pieces */
+.hud-game-gui  {
+	display: block;
+	position: fixed;
+}
+.hud-top {
+	position: fixed;
+	top: 0;
+}
+.hud-topleft {
+	top: 0;
+	left: 0;
+}
+.hud-topcenter {
+	top: 0;
+	margin-left: 50%;
+	margin-right: 50%;
+}
+.hud-topright {
+	top: 0;
+	right: 0;
+}
+.hud-center {
+	position: fixed;
+	top: 50%;
+}
+.hud-centerleft {
+	left: 0;
+	top: 50%;
+}
+.hud-centercenter {
+	top: 50%;
+	margin-left: 50%;
+	margin-right: 50%;
+}
+.hud-centerright {
+	right: 0;
+	top: 50%;
+}
+.hud-bottom {
+	position: fixed;
+	bottom: 0;
+}
+.hud-bottomleft {
+	left: 0;
+	bottom: 0;
+}
+.hud-bottomcenter {
+	bottom: 0;
+	margin-left: 50%;
+	margin-right: 50%;
+}
+.hud-bottomright {
+	bottom: 0;
+	right: 0;
+}
+/* Popup Menu */
+.hud-popup-menu {
+	display: block;
+}
+.hud-popup {
+	display: block;
+}
+.hud-popup-description {
+	display: block;
+}
+.hud-popup-actions {
+	display: flex;
+}
+.hud-popup-placeholder {
+	display: inline-block;
+	flex: 1;
+}
+.hud-popup-accept {
+	display: inline-block;
+}
+.hud-popup-decline {
+	display: inline-block;
+}
+/* Activate Btns */
+.hud-menu-btn {
+	background-repeat: no-repeat;
+	background-position: center center;
+	border: 2px solid #1e90ff;
+	border-radius: 5px;
+	width: 75px;
+	height: 75px;
+}
+.hud-menu-profile-btn {
+	background-image: url("https://img.icons8.com/metro/1600/shop.png");
+}
+.hud-menu-shop-btn {
+	background-image: url("https://img.icons8.com/metro/1600/shop.png");
+}
+.hud-menu-social-btn {
+	background-image: url("https://img.icons8.com/metro/1600/shop.png");
+}
+.hud-menu-settings-btn {
+	background-image: url("https://img.icons8.com/metro/1600/shop.png");
+}
+.server-opt-enabled {
+	font-weight: normal;
+	opacity: 0;
+	color: #000;
+}
+.server-opt-disabled {
+	font-weight: normal;
+	opacity: 0.5;
+	color: #000;
+}
+.server-optgroup {
+	font-weight: bold;
+	color: #000;
+}
+
+/* Responsitivity */
+@media only screen and (min-width: 1047px) {
+	.hud-intro-column {
+		display: inline-block;
+		margin: 10px 5px;
+		-webkit-flex: 0.75; /* Safari 6.1+ */
+		-ms-flex: 0.75; /* IE 10 */ 
+		flex: 0.75;
+		border-radius: 5px;
+		height: auto;
+	}
+	.hud-intro-placeholder {
+		display: inline-block;
+		background: transparent;
+		-webkit-flex: 1; /* Safari 6.1+ */
+		-ms-flex: 1; /* IE 10 */ 
+		flex: 1;
+	}
+	.hud-intro-name, .hud-intro-servers, .hud-intro-play {
+		display: block;
+		width: 75%;
+		padding: 8px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
