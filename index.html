@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Dombs.io</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+		<div class = "hud-intro">
+			<div class = "hud-intro-cover">
+				<div class = "hud-intro-top">
+					<div class = "hud-intro-area hud-intro-topleft">top left</div>
+					<div class = "hud-intro-topcenter">
+						<span class = "hud-intro-gamename" style = "color: #AAA;"><span style = "text-transform: uppercase; color: #EEE;">Dombs</span>.io</span>
+						<span class = "hud-intro-gametext">Build. Defend. Survive.</span>
+					</div>
+					<div class = "hud-intro-area hud-intro-topright">top right</div>
+				</div>
+				<div class = "hud-intro-flex">
+					<div class = "hud-intro-placeholder"></div>
+					<div class = "hud-intro-area hud-intro-column"></div>
+					<form class = "hud-intro-area hud-intro-column hud-intro-form" onsubmit = "playGame()">
+						<label class = "hud-intro-label">Enter Your Name</label>
+						<input class = "hud-intro-name" type = "text" maxlength = "32" placeholder = "Your nickname..." value = "" />
+						<select class = "hud-intro-servers disabled" disabled>
+							<optgroup class = "server-optgroup" label = "International">
+								<option class = "server-opt-enabled" value = "">INTL #1 [0 Players]</option>
+								<option class = "server-opt-enabled" value = "">INTL #2 [0 Players]</option>
+								<option class = "server-opt-enabled" value = "">INTL #3 [0 Players]</option>
+							</optgroup>
+							<optgroup class = "server-optgroup" label = "North America">
+								<option class = "server-opt-enabled" value = "">NA #1 [0 Players]</option>
+								<option class = "server-opt-enabled" value = "">NA #2 [0 Players]</option>
+								<option class = "server-opt-enabled" value = "">NA #3 [0 Players]</option>
+								<option class = "server-opt-enabled" value = "">NA #4 [0 Players]</option>
+								<option class = "server-opt-enabled" value = "">NA #5 [0 Players]</option>
+							</optgroup>
+							<optgroup class = "server-optgroup" label = "South America">
+								<option class = "server-opt-enabled" value = "">SA #1 [0 Players]</option>
+								<option class = "server-opt-enabled" value = "">SA #2 [0 Players]</option>
+								<option class = "server-opt-enabled" value = "">SA #3 [0 Players]</option>
+								<option class = "server-opt-enabled" value = "">SA #4 [0 Players]</option>
+								<option class = "server-opt-enabled" value = "">SA #5 [0 Players]</option>
+							</optgroup>
+							<optgroup class = "server-optgroup" label = "Europe">
+								<option class = "server-opt-enabled" value = "">EU #1 [0 Players]</option>
+								<option class = "server-opt-enabled" value = "">EU #2 [0 Players]</option>
+								<option class = "server-opt-enabled" value = "">EU #3 [0 Players]</option>
+								<option class = "server-opt-enabled" value = "">EU #4 [0 Players]</option>
+								<option class = "server-opt-enabled" value = "">EU #5 [0 Players]</option>
+							</optgroup>
+							<optgroup class = "server-optgroup" label = "Asia">
+								<option class = "server-opt-enabled" value = "">AS #1 [0 Players]</option>
+								<option class = "server-opt-enabled" value = "">AS #2 [0 Players]</option>
+								<option class = "server-opt-enabled" value = "">AS #3 [0 Players]</option>
+								<option class = "server-opt-enabled" value = "">AS #4 [0 Players]</option>
+								<option class = "server-opt-enabled" value = "">AS #5 [0 Players]</option>
+							</optgroup>
+							<optgroup class = "server-optgroup" label = "Australia">
+								<option class = "server-opt-enabled" value = "">AU #1 [0 Players]</option>
+								<option class = "server-opt-enabled" value = "">AU #2 [0 Players]</option>
+								<option class = "server-opt-enabled" value = "">AU #3 [0 Players]</option>
+								<option class = "server-opt-enabled" value = "">AU #4 [0 Players]</option>
+								<option class = "server-opt-enabled" value = "">AU #5 [0 Players]</option>
+							</optgroup>
+						</select>
+						<label class = "hud-intro-label">Play</label>
+						<input class = "hud-intro-play btn btn-green" type = "submit" value = "Play" />
+					</form>
+					<div class = "hud-intro-area hud-intro-column"></div>
+					<div class = "hud-intro-placeholder"></div>
+				</div>
+				<div class = "hud-intro-bottom">© Vesper Studios 2019</div>
+			</div>
+		</div>
+		<div class = "hud-game">
+			<canvas class = "hud-canvas" width = "1084" height = "945"></canvas>
+			<div class = "hud-overlay">
+				<div class = "hud-popup-menu">
+					<!-- To Be Added in JS !-->
+					<div class = "hud-popup hud-popup-[type]">
+						<div class = "hud-popup-description"></div>
+						<div class = "hud-popup-actions">
+							<button class = "hud-popup-accept btn btn-green">✔</button>
+							<button class = "hud-popup-decline btn btn-red">✖</button>
+						</div>
+					</div>
+				</div>
+				<div class = "hud-menu hud-menu-shop">
+					<div class = "hud-menu-top">
+						<div class = "hud-menu-title">Shop</div>
+						<button class = "hud-menu-close btn btn-red">✖</button>
+					</div>
+					<div class = "hud-menu-body"></div>
+				</div>
+				<div class = "hud-menu hud-menu-social">
+					<div class = "hud-menu-top">
+						<div class = "hud-menu-title">Social</div>
+						<button class = "hud-menu-close btn btn-red">✖</button>
+					</div>
+					<div class = "hud-menu-body"></div>
+				</div>
+				<div class = "hud-menu hud-menu-settings">
+					<div class = "hud-menu-top">
+						<div class = "hud-menu-title">Settings</div>
+						<button class = "hud-menu-close btn btn-red">✖</button>
+					</div>
+					<div class = "hud-menu-body"></div>
+			</div>
+			<div class = "hud-game-gui hud-top">
+				<div class = "hud-game-gui hud-topleft">topleft</div>
+				<div class = "hud-game-gui hud-topcenter">topcenter</div>
+				<div class = "hud-game-gui hud-topright">topright</div>
+			</div>
+			<div class = "hud-game-gui hud-center">
+				<div class = "hud-game-gui hud-centerleft">centerleft</div>
+				<div class = "hud-game-gui hud-centercenter">centercenter</div>
+				<div class = "hud-game-gui hud-centerright">centerright
+					<!--
+					<div class = "hud-menu-profile-btn hud-menu-btn"></div>
+					<div class = "hud-menu-shop-btn hud-menu-btn"></div>
+					<div class = "hud-menu-social-btn hud-menu-btn"></div>
+					<div class = "hud-menu-settings-btn hud-menu-btn"></div>
+					!-->
+				</div>
+			</div>
+			<div class = "hud-game-gui hud-bottom">
+				<div class = "hud-game-gui hud-bottomleft">bottomleft</div>
+				<div class = "hud-game-gui hud-bottomcenter">bottomcenter</div>
+				<div class = "hud-game-gui hud-bottomright">bottomright</div>
+			</div>
+		</div>
+  </body>
+</html>
